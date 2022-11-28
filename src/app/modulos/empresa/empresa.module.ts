@@ -6,6 +6,8 @@ import { VerPlanesComponent } from './planes/ver-planes/ver-planes.component';
 import { ContactanosComponent } from './prospectos/contactanos/contactanos.component';
 import { SucursalesComponent } from './sucursales/sucursales.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { BuscarProspectoComponent } from './prospectos/buscar-prospecto/buscar-prospecto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +15,14 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     VerPlanesComponent,
     ContactanosComponent,
     SucursalesComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    BuscarProspectoComponent
   ],
   imports: [
     CommonModule,
-    EmpresaRoutingModule
+    EmpresaRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class EmpresaModule { }

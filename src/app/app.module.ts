@@ -10,6 +10,7 @@ import { Error500Component } from './plantillas/error500/error500.component';
 import { Error404Component } from './plantillas/error404/error404.component';
 import { HomeComponent } from './plantillas/home/home.component';
 import { BarraNavegacionComponent } from './plantillas/barra-navegacion/barra-navegacion.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BarraNavegacionComponent } from './plantillas/barra-navegacion/barra-na
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
