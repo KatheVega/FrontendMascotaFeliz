@@ -7,6 +7,7 @@ import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.compo
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { RegistrarComponent } from './registrar/registrar.component';
 import { OlvidarClaveComponent } from './olvidar-clave/olvidar-clave.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { OlvidarClaveComponent } from './olvidar-clave/olvidar-clave.component';
   ],
   imports: [
     CommonModule,
-    SeguridadRoutingModule
+    SeguridadRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SeguridadModule { }

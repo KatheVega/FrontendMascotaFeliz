@@ -9,17 +9,19 @@
                 <div class="col l4 offset-l2 s12">
                   <h5 class="white-text">mi cuenta</h5>
                   <ul>
-                    <li><a class="grey-text text-lighten-3" href="seguridad/login">Iniciar sesion</a></li>
-                    <li><a class="grey-text text-lighten-3" href="user/registro">Registrarse</a></li>
-                    <li><a class="grey-text text-lighten-3" href="empresa/prospectos/contactanos">Servicioa al cliente</a></li>
+                    <li *ngIf="!seInicioSesion"><a class="grey-text text-lighten-3" routerLink="seguridad/login">Iniciar sesion</a></li>
+                    <li *ngIf="!seInicioSesion"><a class="grey-text text-lighten-3" routerLink="user/registro">Registrarse</a></li>
+                    <li><a class="grey-text text-lighten-3" routerLink="/empresa/prospectos/contactanos">Servicioa al cliente</a></li>
+                    <li *ngIf="seInicioSesion"><a class="text-white" routerLink="seguridad/cerrar-sesion">Cerrar sesion</a></li>
                   </ul>
                 </div>
                 <div class="col l4 offset-6 s12">
                   <h5 class="white-text">Sucursales</h5>
                   <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Bogota</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Cali</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Medellin 2</a></li>
+                    <li><a class="grey-text text-lighten-3" routerLink="#!">Bogota</a></li>
+                    <li><a class="grey-text text-lighten-3" routerLink="#!">Cali</a></li>
+                    <li><a class="grey-text text-lighten-3" routerLink="#!">Medellin 2</a></li>
+                    <li><a class="" >``</a></li>
                   </ul>
                 </div>
               </div>

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BuscarMascotaComponent } from './mascotas/buscar-mascota/buscar-mascota.component';
 import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
@@ -23,55 +25,68 @@ import { ListarUsuarioComponent } from './usuarios/listar-usuario/listar-usuario
 const routes: Routes = [
   {
     path:"crear-usuario",
-    component:CrearUsuarioComponent
+    component:CrearUsuarioComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"buscar-usuario",
-    component:BuscarUsuarioComponent
+    component:BuscarUsuarioComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"editar-usuario",
-    component:EditarUsuarioComponent
+    component:EditarUsuarioComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"eliminar-usuario",
-    component:EliminarUsuarioComponent
+    component:EliminarUsuarioComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
-    path:"listar-usuarios",
-    component:ListarUsuarioComponent
+    path:"listar-usuario",
+    component:ListarUsuarioComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"crear-mascota",
-    component:CrearMascotaComponent
+    component:CrearMascotaComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"buscar-mascota",
-    component:BuscarMascotaComponent
+    component:BuscarMascotaComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"editar-mascota",
-    component:EditarMascotaComponent
+    component:EditarMascotaComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"eliminar-mascota",
-    component:EliminarMascotaComponent
+    component:EliminarMascotaComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"listar-mascota",
-    component:ListarMascotaComponent
+    component:ListarMascotaComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"crear-sucursal",
-    component:CrearSucursalComponent
+    component:CrearSucursalComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"eliminar-sucursal",
-    component:EliminarSucursalComponent
+    component:EliminarSucursalComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"editar-sucursal",
-    component:EditarSucursalComponent
+    component:EditarSucursalComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"listar-sucursal",
@@ -83,23 +98,28 @@ const routes: Routes = [
   },
   {
     path:"crear-plan",
-    component:CrearPlanComponent
+    component:CrearPlanComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"eliminar-plan",
-    component:EliminarPlanComponent
+    component:EliminarPlanComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"editar-plan",
-    component:EditarPlanComponent
+    component:EditarPlanComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"listar-plan",
-    component:ListarPlanComponent
+    component:ListarPlanComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:"dashboard",
-    component:DashboardComponent
+    component:DashboardComponent,
+    canActivate:[ValidadorSesionGuard]
   }
 ];
 
